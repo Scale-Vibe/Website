@@ -337,7 +337,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(isOpen&&e
 function observeAll(){io.disconnect();document.querySelectorAll('.rl-reel').forEach(function(el){io.observe(el)})}
 observeAll();
 // Paste your Apps Script web app URL (ends with /exec). Leave empty to use the built-in reels.
-var REELS_API_URL='';
+var REELS_API_URL='https://script.google.com/macros/s/AKfycbyFivyX238ll3i7jVTzQ7ykPTeNOKkc-IFvHAMJ-pJTISTE3NJKRcJDL3Hlwc_dlmmo7g/exec';
 var PAL=[['#F3677A','#8E7CF0'],['#4FB3F6','#8E7CF0'],['#FF9A4D','#F3677A'],['#C98B5A','#F3677A'],['#FF9A4D','#E5484D'],['#34C3A0','#4FB3F6'],['#8E7CF0','#4FB3F6']];
 if(REELS_API_URL)fetch(REELS_API_URL+'?mode=reels').then(function(r){return r.json()}).then(function(d){
   if(!Array.isArray(d)||!d.length)return;
